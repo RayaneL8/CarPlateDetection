@@ -1,1 +1,5 @@
 *.h5
+CarPlate_MaskRCNN/images
+CarPlate_MaskRCNN/logs
+CarPlate_MaskRCNN/samples/custom/.ipynb_checkpoints/demo-checkpoint.ipynb
+CarPlate_MaskRCNN/samples/custom/__pycache__/custom.cpython-36.pyc
