@@ -24,9 +24,12 @@ Production : 25 images
 
 Ces images ont été annotées à l'aide de l'outil LabelMe pour marquer les plaques d'immatriculation.
 Au début nous avons essayé d'être très précis et peut être même trop précis. 
+![alt text](polygon-annotation.png)
+
 Lorsqu'il y'avait des plaque d'immatriculation avec des formes qui n'étaient pas rectangulaire nous faisions une annotations avec plus de 4 points.
 Cela pouvais poser des problèmes lors par la suite car notre programme trouvais parfois des formes assez surprenant dans nos images comme étant des plaque d'immatriculation.
 C'est pour cela qu'à la fin nous avons repris tout les annotations pour avoir uniquement des annotations de 4 points et de forme rectangulaire.
+![alt text](rectangle-annotation.png)
 
 b. Hyperparamètres du Modèle pour l'Entraînement
 
