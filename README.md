@@ -5,7 +5,16 @@ Dans le cadre de ce projet, nous avons utilisé un modèle Mask R-CNN pour déte
 2. Environnement et Préparation des Données
 
 a. Préparation du Dataset
-Un dataset de 300 images a été collecté à partir de différentes sources d'images de plaques d'immatriculation. Ces images ont été annotées à l'aide de l'outil LabelMe pour marquer les plaques d'immatriculation.
+Le dataset à beaucoup évolué au cours du projet. Dans un premier temps nous avons utilisé un dataset de 150 images collectées à partir de différentes sources d'images de plaques d'immatriculation. 
+
+Répartition des images :
+
+Entraînement : 100 images
+Validation : 30 images
+Production : 20 images
+
+Nous avons ensuite fait le choix de doubler nos images pour avoir plus de contenu durant l'entrainement, bien que les différentes étapes allais durer plus longtemps.
+Un dataset de 300 images a donc été construit.
 
 Répartition des images :
 
@@ -13,11 +22,17 @@ Entraînement : 225 images
 Validation : 50 images
 Production : 25 images
 
+Ces images ont été annotées à l'aide de l'outil LabelMe pour marquer les plaques d'immatriculation.
+Au début nous avons essayé d'être très précis et peut être même trop précis. 
+Lorsqu'il y'avait des plaque d'immatriculation avec des formes qui n'étaient pas rectangulaire nous faisions une annotations avec plus de 4 points.
+Cela pouvais poser des problèmes lors par la suite car notre programme trouvais parfois des formes assez surprenant dans nos images comme étant des plaque d'immatriculation.
+C'est pour cela qu'à la fin nous avons repris tout les annotations pour avoir uniquement des annotations de 4 points et de forme rectangulaire.
+
 b. Hyperparamètres du Modèle pour l'Entraînement
 
 Les hyperparamètres utilisés pour l'entraînement du modèle sont les suivants :
 
-BACKBONE : resnet101
+```BACKBONE : resnet101 
 BACKBONE_STRIDES : [4, 8, 16, 32, 64]
 BATCH_SIZE : 2
 BBOX_STD_DEV : [0.1, 0.1, 0.2, 0.2]
@@ -65,6 +80,7 @@ USE_MINI_MASK : True
 USE_RPN_ROIS : True
 VALIDATION_STEPS : 50
 WEIGHT_DECAY : 0.0001
+```
 
 
 3. Résultats de l'Entraînement
