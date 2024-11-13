@@ -3,7 +3,7 @@
 ## Noms des Étudiants
 
 1. Rayan DANSOU : 323198885
-2. Rayane SLIMANI : 
+2. Rayane SLIMANI : 32011741
 
 ## 1. Introduction
 
@@ -212,7 +212,10 @@ loss: 0.4274 - rpn_class_loss: 0.0086 - rpn_bbox_loss: 0.1550 - mrcnn_class_loss
 
 ### d. Commentaire
 
-Depuis l'epoch 20,  Nous avons dans un premier temps eu un pique dans les pertes (à cause de l'introduction de nouveaux hyperparamètres), puis une stabilisation. Cependant à la fin de l'entrainement avec les nouveau hyperpramètres, on peut remarquer que les pertes sont plus élevées qu'a l'époch 20. Le modèle pourrait être entrain de faire de l'overfitting notamment à cause des pertes de validations sui se dégradent.
+Depuis l'epoch 20,  Nous avons dans un premier temps eu un pique dans les pertes (à cause de l'introduction de nouveaux hyperparamètres), puis une stabilisation. Cependant à la fin de l'entrainement avec les nouveau hyperpramètres, on peut remarquer que les pertes sont plus élevées qu'a l'époch 20. Le modèle pourrait être entrain de faire de l'overfitting notamment à cause des pertes de validations sui se dégradent. 
+On peux également remarquer que très rarement le modèle reconnait des adresses (eg. www.google.com) ,qui peuvent se trouver sur les images, comme étant des plaque d'immatriculation. 
+Cela est en partie dû au fait que pendant les annotations, on a pris entièrement les plaques d'immatriculation, avec les petits détails qui se trouvaient dessus (comme par exemple des adresse web).
+On aurait pu faire le choix de restraindre manuellement nos annotations et de ne prendre que le contenu qui nous intéresse, c'est à dire, la partie de la plaque d'immatriculation contenant les chiffres et lettres de celle-ci.
 
 ### e. résultats du modèle 
 
