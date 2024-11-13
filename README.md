@@ -133,8 +133,7 @@ Le graphique ci-dessous illustre l'évolution des pertes d'entraînement (variab
 
 ### e. Commentaires
 
-Le modèle montre une bonne évolution des pertes, et les métriques de validation indiquent que le modèle est capable de détecter correctement la plupart des plaques d'immatriculation dans le jeu de validation. Cependant, du fine tuning pourrait être nécessaire pour réduire les faux positifs et les faux négatifs restants.
-
+Le modèle montre une bonne évolution des pertes d'entrainement. Cependant, les métriques de validation indiquent que le modèle n'est pas encore capable de détecter correctement la plupart des plaques d'immatriculation dans le jeu de validation (loss à 0,6).Du fine tuning pourra donc être nécessaire pour réduire les faux positifs et les faux négatifs restants.
 
 
 
@@ -216,7 +215,8 @@ loss: 0.4274 - rpn_class_loss: 0.0086 - rpn_bbox_loss: 0.1550 - mrcnn_class_loss
 
 ### d. Commentaire
 
-Depuis l'epoch 20,  Nous avons dans un premier temps eu un pique dans les pertes (à cause de l'introduction de nouveaux hyperparamètres), puis une stabilisation. Cependant à la fin de l'entrainement avec les nouveau hyperpramètres, on peut remarquer que les pertes sont plus élevées qu'a l'époch 20. Le modèle pourrait être entrain de faire de l'overfitting notamment à cause des pertes de validations sui se dégradent. 
+Depuis l'epoch 20,  Nous avons dans un premier temps eu un pique dans les pertes (à cause de l'introduction de nouveaux hyperparamètres), puis une stabilisation. Cependant à la fin de l'entrainement avec les nouveau hyperpramètres, on peut remarquer que les pertes sont plus élevées qu'a l'époch 20. Le modèle pourrait être entrain de faire de l'overfitting notamment à cause des pertes de validations qui se dégradent encore plus qu'avant.
+
 On peux également remarquer que très rarement le modèle reconnait des adresses (eg. www.google.com) ,qui peuvent se trouver sur les images, comme étant des plaque d'immatriculation. 
 Cela est en partie dû au fait que pendant les annotations, on a pris entièrement les plaques d'immatriculation, avec les petits détails qui se trouvaient dessus (comme par exemple des adresse web).
 On aurait pu faire le choix de restraindre manuellement nos annotations et de ne prendre que le contenu qui nous intéresse, c'est à dire, la partie de la plaque d'immatriculation contenant les chiffres et lettres de celle-ci.
