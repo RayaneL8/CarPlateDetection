@@ -133,7 +133,7 @@ Le graphique ci-dessous illustre l'évolution des pertes d'entraînement (variab
 
 ### e. Commentaires
 
-Le modèle montre une bonne évolution des pertes d'entrainement. Cependant, les métriques de validation indiquent que le modèle n'est pas encore capable de détecter correctement la plupart des plaques d'immatriculation dans le jeu de validation (loss à 0,6).Du fine tuning pourra donc être nécessaire pour réduire les faux positifs et les faux négatifs restants.
+Le modèle montre une bonne évolution des pertes d'entrainement. Cependant, les métriques de validation indiquent que le modèle n'est pas encore capable de détecter correctement la plupart des plaques d'immatriculation dans le jeu de validation (val_loss à 0,6).Du fine tuning pourra donc être nécessaire pour réduire les faux positifs et les faux négatifs restants.
 
 
 
