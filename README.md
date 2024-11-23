@@ -104,9 +104,7 @@ Extrait de log (dernière ligne) :
 
 Epoch 20/20
 
-````
-loss: 0.2353 - rpn_class_loss: 0.0038 - rpn_bbox_loss: 0.0774 - mrcnn_class_loss: 0.0112 - mrcnn_bbox_loss: 0.0443 - mrcnn_mask_loss: 0.0985 - val_loss: 0.6115 - val_rpn_class_loss: 0.0032 - val_rpn_bbox_loss: 0.2181 - val_mrcnn_class_loss: 0.0287 - val_mrcnn_bbox_loss: 0.1614 - val_mrcnn_mask_loss: 0.2001 
-````
+![alt text](image-16.png)
 
 Pour des logs plus détaillés, voir le fichier logs.txt.
 
@@ -204,9 +202,9 @@ WEIGHT_DECAY                   0.0001
 
 Epoch 25/25
 
-````
-loss: 0.4274 - rpn_class_loss: 0.0086 - rpn_bbox_loss: 0.1550 - mrcnn_class_loss: 0.0247 - mrcnn_bbox_loss: 0.1026 - mrcnn_mask_loss: 0.1365 - val_loss: 0.6439 - val_rpn_class_loss: 0.0176 - val_rpn_bbox_loss: 0.2313 - val_mrcnn_class_loss: 0.0385 - val_mrcnn_bbox_loss: 0.1614 - val_mrcnn_mask_loss: 0.1952
-````
+![alt text](image-15.png)
+
+Pour plus de détails, vous pouvez regarder le fichier fine-tuning-logs.txt
 
 ### c. graphe des pertes 
 
